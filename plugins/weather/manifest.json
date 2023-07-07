@@ -1,0 +1,32 @@
+// manifest.json
+{
+  "name": "Weather",
+  "description": "A ChatGPT plugin to get the weather of any given location",
+  "icon": "https://weather.vercel.app/icon.png",
+  "version": "1.0.0",
+  "inputs": [
+    {
+      "name": "location",
+      "type": "string",
+      "description": "The name of the location to get the weather for",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "weather",
+      "type": "string",
+      "description": "The current weather condition and temperature of the location"
+    }
+  ],
+  "errors": [
+    {
+      "code": 400,
+      "message": "Invalid location"
+    },
+    {
+      "code": 500,
+      "message": "Internal server error"
+    }
+  ]
+}
